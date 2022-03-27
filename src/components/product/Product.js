@@ -22,7 +22,7 @@ const Product = ({ product, handleAddToCart }) => {
       <button
         className="add-to-cart"
         onClick={() => {
-          handleAddToCart(product.id);
+          handleAddToCart(product);
         }}
       >
         <p>
