@@ -1,4 +1,5 @@
 import React from "react";
+import { FiShoppingCart } from "react-icons/fi";
 import "./Product.css";
 
 const Product = ({ product, handleAddToCart }) => {
@@ -18,8 +19,15 @@ const Product = ({ product, handleAddToCart }) => {
           <small>Ratings: {ratings} stars</small>
         </p>
       </div>
-      <button className="add-to-cart" onClick={ ()=>{handleAddToCart(product.id)} }>
-        <p>Add To Cart</p>
+      <button
+        className="add-to-cart"
+        onClick={() => {
+          handleAddToCart(product.id);
+        }}
+      >
+        <p>
+          Add To Cart <FiShoppingCart></FiShoppingCart>
+        </p>
       </button>
     </div>
   );
